@@ -7,12 +7,6 @@ sc.configure(bg = 'white')
 
 
 def calculate(func):
-    # li = []
-    # for i in range(0, 10):
-    #     li.append(func[func.find('{')+1:func.find('}')])
-    #     func = func[func.find('}')+1:]
-    #     if func == '':
-    #         break
     li = []
     
     for x in range(-10, 10):
@@ -21,17 +15,6 @@ def calculate(func):
         except:
             li.append(0)
     return li
-
-
-# def calculate2(func2):
-#     li2 = []
-
-#     for y in range(-10, 10):
-#         try:
-#             li2.append(eval(func2)*25)
-#         except:
-#             li2.append(0)
-#     return li2
     
 
 
@@ -53,23 +36,6 @@ def start():
         print(i, ind, dots[ind])
         ind+=1
 
-
-# def start2():
-#     global func2
-#     func2 = function_entry2.get()[2:]
-
-#     dots2 = calculate2(func2)
-#     print(dots2)
-
-#     ind2 = 0
-
-#     for i in range(0, 500, 25):
-#         try:
-#             c.create_oval(-dots2[ind2]+248, i-2, -dots2[ind2]+253, i+3, fill='red')
-#         except:
-#             pass
-#         print(i, ind2, dots2[ind2])
-#         ind2+=1
 
 
 def window():
@@ -93,26 +59,6 @@ def window():
     button_start.place(x = 115, y = 70)
 
 
-# def window2():
-#     global function_entry2
-#     sc3 = Toplevel()
-#     sc3.geometry("250x100")
-#     sc3.configure(bg = 'white')
-
-#     function_entry2 = Entry(sc3, bg = 'white', justify = 'center')
-#     function_entry2.insert(0, 'x=')
-#     function_entry2.place(x = 70, y = 40)
-
-#     button_start2 = Button(sc3,
-#         text = 'start',
-#         bg = 'white',
-#         relief = 'flat',
-#         overrelief = 'solid',
-#         command = start2
-#     )
-
-    # button_start2.place(x = 115, y = 70)
-
 
 
 c = Canvas(bg = 'white', highlightthickness=0, width=500, height=500)
@@ -120,7 +66,6 @@ c = Canvas(bg = 'white', highlightthickness=0, width=500, height=500)
 c.create_line(0, 250, 500, 250)
 c.create_line(250, 500, 250, 0)
 
-# zero_label = Label(text = '0', bg = 'white').place(x = 235, y = 255)
 
 c.place(x = 0, y = 0)
 
@@ -159,16 +104,6 @@ bttn_create = Button(
 
 bttn_create.place(x = 420, y = 30)
 
-
-# bttn_extra = Button(
-#     text = 'extra',
-#     bg = 'white',
-#     relief = 'flat',
-#     overrelief = 'solid',
-#     command = window2
-# )
-
-# bttn_extra.place(x = 420, y = 70)
 
 
 sc.mainloop()
